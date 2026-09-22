@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Edição Especial ReMark — EnANPAD 50 anos | Guia de Submissão</title>
+<style>
+  :root{
+    --azul:#123E7C;
+    --azul-med:#1F5DA8;
+    --azul-claro:#E8F0FA;
+    --amarelo:#FFC72C;
+    --tinta:#14243A;
+    --tinta-suave:#4A5B72;
+    --papel:#FFFFFF;
+    --fundo:#F4F7FB;
+    --linha:#D6E1EF;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --azul:#8CB7E8; --azul-med:#6FA2DE; --azul-claro:#17273D;
+      --tinta:#E8EFF7; --tinta-suave:#A9BBD0; --papel:#111C2B;
+      --fundo:#0B1421; --linha:#26374D;
+    }
+  }
+  :root[data-theme="dark"]{
+    --azul:#8CB7E8; --azul-med:#6FA2DE; --azul-claro:#17273D;
+    --tinta:#E8EFF7; --tinta-suave:#A9BBD0; --papel:#111C2B;
+    --fundo:#0B1421; --linha:#26374D;
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  *,*::before,*::after{box-sizing:inherit;}
+  body{
+    margin:0; background:var(--fundo); color:var(--tinta);
+    font-family:"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px 64px;}
+
+  header.capa{
+    background:linear-gradient(135deg,#0E3266 0%,#1F5DA8 65%,#2C78C9 100%);
+    color:#fff; padding:40px 20px 34px; margin-bottom:28px;
+  }
+  header.capa .inner{max-width:900px;margin:0 auto;}
+  .selo{
+    display:inline-block; background:var(--amarelo); color:#123E7C;
+    font-weight:700; font-size:.78rem; letter-spacing:.09em; text-transform:uppercase;
+    padding:5px 13px; border-radius:999px; margin-bottom:16px;
+  }
+  header.capa h1{font-size:2.05rem; line-height:1.2; margin:0 0 8px; font-weight:700;}
+  header.capa p{margin:0; color:#D8E6F7; font-size:1.02rem; max-width:62ch;}
+  .meta-capa{margin-top:18px; font-size:.86rem; color:#B9D2EE;}
+
+  .acoes{display:flex; flex-wrap:wrap; gap:10px; margin:-14px 0 30px;}
+  .btn{
+    border:0; cursor:pointer; font:inherit; font-weight:600; font-size:.92rem;
+    padding:11px 18px; border-radius:9px; background:var(--azul-med); color:#fff;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn.secundario{background:var(--papel); color:var(--azul); border:1.5px solid var(--linha);}
+  .btn:hover{filter:brightness(1.07);}
+
+  section{background:var(--papel); border:1px solid var(--linha); border-radius:14px;
+    padding:26px 26px 22px; margin-bottom:22px;}
+  h2{font-size:1.32rem; margin:0 0 4px; color:var(--azul); font-weight:700;}
+  h2 .num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:30px; height:30px; border-radius:8px; background:var(--azul-claro);
+    color:var(--azul); font-size:.95rem; margin-right:10px; vertical-align:middle;
+  }
+  .sub{color:var(--tinta-suave); font-size:.94rem; margin:0 0 18px;}
+  h3{font-size:1.02rem; margin:22px 0 7px; color:var(--tinta);}
+  p{margin:0 0 12px;}
+  ul,ol{margin:0 0 12px; padding-left:22px;}
+  li{margin-bottom:7px;}
+  a{color:var(--azul-med); overflow-wrap:anywhere;}
+  strong{color:var(--tinta);}
+
+  .passos{list-style:none; padding:0; margin:0; counter-reset:passo;}
+  .passos li{
+    counter-increment:passo; position:relative; padding:16px 0 16px 56px;
+    border-top:1px solid var(--linha); margin:0;
+  }
+  .passos li:first-child{border-top:0;}
+  .passos li::before{
+    content:counter(passo); position:absolute; left:0; top:15px;
+    width:36px; height:36px; border-radius:50%; background:var(--azul);
+    color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center;
+  }
+  .passos b{display:block; font-size:1.03rem; margin-bottom:3px;}
+
+  .destaque{
+    background:var(--azul-claro); border-radius:11px;
+    padding:16px 20px; margin:6px 0 16px;
+  }
+  .destaque p:last-child{margin-bottom:0;}
+  .alerta{
+    background:#FFF6E0; border-radius:11px; padding:16px 20px; margin:6px 0 16px;
+    color:#5A4300;
+  }
+  .alerta strong{color:inherit;}
+
+  .grade{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:14px 0 6px;}
+  .cartao{background:var(--azul-claro); border-radius:11px; padding:15px 17px;}
+  .cartao b{display:block; color:var(--azul); margin-bottom:5px; font-size:.97rem;}
+  .cartao span{font-size:.9rem; color:var(--tinta-suave);}
+
+  table{width:100%; border-collapse:collapse; font-size:.93rem; margin:8px 0 14px;}
+  th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--linha); vertical-align:top;}
+  th{color:var(--azul); font-size:.82rem; text-transform:uppercase; letter-spacing:.05em;}
+  .rolagem{overflow-x:auto;}
+
+  .check{list-style:none; padding:0; margin:10px 0 0;}
+  .check li{display:flex; gap:11px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--linha);}
+  .check input{margin-top:4px; width:17px; height:17px; accent-color:var(--azul-med); flex:0 0 auto;}
+  .check label{cursor:pointer;}
+
+  footer{color:var(--tinta-suave); font-size:.86rem; text-align:center; padding-top:10px;}
+  footer a{color:var(--azul-med);}
+
+  @media print{
+    body{background:#fff; font-size:11.5pt;}
+    header.capa{background:#123E7C !important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .acoes{display:none;}
+    section{break-inside:avoid; border:1px solid #ccc; box-shadow:none;}
+    .wrap{padding-bottom:0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="capa">
+  <div class="inner">
+    <span class="selo">Chamada · EnANPAD 50 anos</span>
+    <h1>Edição Especial ReMark</h1>
+    <p>Guia de submissão para os artigos aprovados na Divisão de Marketing do EnANPAD 2026. Reúne o passo a passo da chamada e as diretrizes vigentes da Revista Brasileira de Marketing.</p>
+    <div class="meta-capa">ReMark — Revista Brasileira de Marketing · e-ISSN 2177-5184 · Qualis A4 · Portal de Periódicos UNINOVE</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="acoes">
+    <a class="btn" href="index.html" download="guia-edicao-especial-remark.html">⬇ Baixar este guia (.html)</a>
+    <button class="btn secundario" onclick="window.print()">🖨 Imprimir / salvar em PDF</button>
+    <a class="btn secundario" href="https://periodicos.uninove.br/remark/about/submissions" target="_blank" rel="noopener">↗ Diretrizes oficiais da ReMark</a>
+  </div>
+
+  <section>
+    <h2><span class="num">1</span>Antes de submeter</h2>
+    <p class="sub">O artigo chega à ReMark já avaliado no congresso — aproveite isso.</p>
+    <div class="destaque">
+      <p><strong>Incorpore ao texto as sugestões dos revisores do EnANPAD que você julgar apropriadas.</strong> A avaliação do congresso não substitui a avaliação da revista: o manuscrito seguirá para o fluxo editorial normal, em sistema duplo-cego.</p>
+    </div>
+    <ul>
+      <li>Revise a aderência do texto às normas da APA e ao formato exigido pela revista.</li>
+      <li>Confirme que todos os autores estão cientes e de acordo — <strong>não é possível incluir ou alterar autores depois da submissão</strong>.</li>
+      <li>Garanta que cada autor tenha ORCID ativo. A ReMark não publica artigos sem ORCID.</li>
+      <li>Atenção à regra de tramitação: cada autor pode ter apenas um manuscrito em tramitação na revista por vez.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>Como submeter</h2>
+    <p class="sub">Processo padrão da ReMark, com uma única escolha específica desta chamada.</p>
+    <ol class="passos">
+      <li>
+        <b>Acesse o sistema e faça login</b>
+        Submissão exclusivamente online, pelo OJS da revista: <a href="https://periodicos.uninove.br/remark/login" target="_blank" rel="noopener">periodicos.uninove.br/remark/login</a>. É preciso estar cadastrado como autor.
+      </li>
+      <li>
+        <b>Na etapa “Início”, selecione a seção <span style="color:var(--azul)">ENANPAD 50 anos</span></b>
+        Esse é o ponto que direciona o manuscrito para a edição especial. Escolha também o idioma principal da submissão. Se a seção não for marcada, o artigo entra no fluxo de <em>Artigos</em> comum.
+      </li>
+      <li>
+        <b>Envie o manuscrito em português <u>e</u> em inglês</b>
+        As duas versões seguem as diretrizes da revista — resumo estruturado, formatação APA e demais normas de redação. A tradução deve ser feita por nativo ou tradutor experiente.
+      </li>
+      <li>
+        <b>Preencha os metadados completos, nos dois idiomas</b>
+        Nome por extenso, titulação, afiliação com sigla, cidade, estado, país, ORCID e URL do Currículo Lattes, para todos os autores. Submissões com metadados incompletos são arquivadas.
+      </li>
+      <li>
+        <b>Suba os arquivos suplementares obrigatórios</b>
+        Folha de rosto com a biografia dos autores (PT e EN), <strong>Tabela CRediT</strong> e a <strong>Declaração de Revisão de Texto, Tradução e Uso de IA</strong> assinada por todos os autores.
+      </li>
+    </ol>
+    <div class="alerta">
+      <p><strong>Anonimato:</strong> antes de subir o arquivo, limpe as propriedades do documento (Arquivo › Informações › Verificar se há problemas › Inspecionar documento › Propriedades do Documento e Informações Pessoais › Remover tudo).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>Resumo estruturado</h2>
+    <p class="sub">Máximo de 250 palavras, em português e inglês, acompanhado de título e palavras-chave.</p>
+    <div class="grade">
+      <div class="cartao"><b>Objetivo</b><span>Obrigatório — o que o estudo pretende demonstrar.</span></div>
+      <div class="cartao"><b>Método</b><span>Obrigatório — em ensaios teóricos, indicar a abordagem adotada.</span></div>
+      <div class="cartao"><b>Resultados</b><span>Obrigatório — os principais achados, de forma sucinta.</span></div>
+      <div class="cartao"><b>Contribuições teóricas/metodológicas</b><span>Obrigatório.</span></div>
+      <div class="cartao"><b>Originalidade / relevância</b><span>Obrigatório — o gap teórico e a relevância acadêmica.</span></div>
+      <div class="cartao"><b>Contribuições sociais / gerenciais</b><span>Opcional.</span></div>
+      <div class="cartao"><b>ODS</b><span>Obrigatório — objetivos alcançados, separados por vírgula, em minúsculas.</span></div>
+    </div>
+    <p><strong>Título:</strong> recomendado até 8 palavras, direto e objetivo; subtítulo livre, também curto. <strong>Palavras-chave:</strong> de três a cinco.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>Formatação e redação</h2>
+    <div class="rolagem">
+      <table>
+        <tr><th>Item</th><th>Exigência</th></tr>
+        <tr><td>Norma</td><td>APA — redação, citações e referências</td></tr>
+        <tr><td>Fonte e espaçamento</td><td>Times New Roman 12, entrelinhas 1,5</td></tr>
+        <tr><td>Página</td><td>Carta/Letter (21,59 × 27,94 cm), margens de 2,54 cm</td></tr>
+        <tr><td>Extensão</td><td>15 a 25 páginas, incluindo resumo e referências</td></tr>
+        <tr><td>Arquivo</td><td>Word ou RTF, até 2 MB, sem identificação nas propriedades</td></tr>
+        <tr><td>Tabelas e figuras</td><td>No corpo do texto, na ordem de citação, fonte tamanho 10, com legenda e fonte completa</td></tr>
+        <tr><td>Referências eletrônicas</td><td>DOI com o prefixo https://doi.org/ , sem quebras e sem sinais &lt; &gt;</td></tr>
+        <tr><td>Unidades</td><td>Sistema Internacional (SI)</td></tr>
+        <tr><td>Estrangeirismos</td><td>Em itálico; neologismos entre aspas</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>Metadados: o que mais gera devolução</h2>
+    <p class="sub">Os metadados alimentam DOI, indexação e citação. O zelo aqui tem efeito direto na visibilidade do artigo.</p>
+    <ul>
+      <li>Nome completo, sem abreviações e sem caixa alta; sem títulos de tratamento (Dr., Ms., Sr.) no campo do nome.</li>
+      <li>Afiliação no formato: instituição por extenso e sigla, vírgula, cidade e abreviatura do estado. Ex.: <em>Universidade Nove de Julho – UNINOVE, Programa de Pós-Graduação em Administração (PPGA), São Paulo, SP, Brasil</em>.</li>
+      <li>Sem vínculo institucional? Informar “Pesquisador Autônomo”, com cidade e estado.</li>
+      <li>Biografia iniciando pela titulação mais alta.</li>
+      <li>ORCID obrigatório para todos os autores — cadastro gratuito em <a href="https://orcid.org/register" target="_blank" rel="noopener">orcid.org/register</a>.</li>
+      <li>Campo URL: endereço do Currículo Lattes ou site profissional. O ORCID <strong>não</strong> vai nesse campo.</li>
+      <li>Título sem caixa alta, exceto nomes próprios e siglas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span>Tabela CRediT</h2>
+    <p>O envio da <strong>Tabela CRediT</strong> é obrigatório, como documento suplementar, pelo autor que realiza a submissão. Todos os itens da taxonomia devem ser assinalados; o que não se aplica recebe um traço. Antes da publicação, todos os autores são notificados para validar a contribuição informada.</p>
+    <p>Modelo e detalhamento da política: <a href="https://periodicos.uninove.br/remark/CRediT" target="_blank" rel="noopener">periodicos.uninove.br/remark/CRediT</a> · <a href="https://periodicos.uninove.br/remark/libraryFiles/downloadPublic/2" target="_blank" rel="noopener">baixar o modelo de tabela</a>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span>Revisão de texto e uso de IA</h2>
+    <p>A declaração de revisão gramatical, normativa, tradução e uso de Inteligência Artificial é <strong>documento suplementar obrigatório</strong> e deve ser assinada eletronicamente por <strong>todos</strong> os autores.</p>
+    <h3>O que declarar sobre IA</h3>
+    <ul>
+      <li>Se houve ou não uso de IA — a declaração é obrigatória nos dois casos.</li>
+      <li>Havendo uso: ferramenta, tecnologia e <strong>versão</strong>; finalidade; e em quais etapas do artigo foi aplicada (revisão textual, tradução, criação, edição ou manipulação de imagens).</li>
+      <li>Detalhes de <em>prompts</em>, contexto de uso e data; se extenso, resumir no texto e remeter a um apêndice.</li>
+      <li>Limitações e possíveis vieses das ferramentas utilizadas.</li>
+      <li>A declaração de uso vai na seção de método — ou em Agradecimentos, quando o tipo de artigo não tiver método.</li>
+    </ul>
+    <h3>Limites da política</h3>
+    <ul>
+      <li>IA não é autora e não pode ser creditada como tal.</li>
+      <li>Não se admite IA para gerar partes substantivas do estudo: construção de argumentos, análise de dados ou interpretação de resultados.</li>
+      <li>Fabricar ou distorcer dados primários com IA é inaceitável.</li>
+      <li>Usos aceitos como apoio: tradução, correção de linguagem, transcrição, auxílio em programação e busca de referências — sempre declarados.</li>
+      <li>A responsabilidade pelo conteúdo final é integralmente dos autores.</li>
+    </ul>
+    <p>Política completa: <a href="https://periodicos.uninove.br/remark/usoia" target="_blank" rel="noopener">periodicos.uninove.br/remark/usoia</a>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span>Checklist antes de clicar em “enviar”</h2>
+    <p class="sub">Marque conforme for conferindo. Os cliques valem apenas nesta sessão.</p>
+    <ul class="check">
+      <li><input type="checkbox" id="c1"><label for="c1">Sugestões dos revisores do EnANPAD avaliadas e incorporadas quando pertinentes</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">Seção <strong>ENANPAD 50 anos</strong> selecionada na etapa “Início”</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">Versões em português e em inglês prontas e conferidas</label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">Resumo estruturado com os sete itens, até 250 palavras, nos dois idiomas</label></li>
+      <li><input type="checkbox" id="c5"><label for="c5">Formatação APA, Times New Roman 12, espaço 1,5, 15–25 páginas</label></li>
+      <li><input type="checkbox" id="c6"><label for="c6">Propriedades do arquivo limpas (anonimato preservado)</label></li>
+      <li><input type="checkbox" id="c7"><label for="c7">Metadados completos de todos os autores, nos dois idiomas, com ORCID e Lattes</label></li>
+      <li><input type="checkbox" id="c8"><label for="c8">Folha de rosto com biografias (PT e EN) anexada</label></li>
+      <li><input type="checkbox" id="c9"><label for="c9">Tabela CRediT preenchida e anexada</label></li>
+      <li><input type="checkbox" id="c10"><label for="c10">Declaração de Revisão de Texto, Tradução e Uso de IA assinada por todos os autores</label></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">9</span>Links úteis</h2>
+    <ul>
+      <li><a href="https://periodicos.uninove.br/remark/about/submissions" target="_blank" rel="noopener">Diretrizes para autores e condições de submissão</a></li>
+      <li><a href="https://periodicos.uninove.br/remark/login" target="_blank" rel="noopener">Acesso e cadastro no OJS da ReMark</a></li>
+      <li><a href="https://periodicos.uninove.br/remark/CRediT" target="_blank" rel="noopener">Política de autoria — CRediT</a></li>
+      <li><a href="https://periodicos.uninove.br/remark/usoia" target="_blank" rel="noopener">Política de uso de Inteligência Artificial</a></li>
+      <li><a href="https://periodicos.uninove.br/remark/codigoconduta" target="_blank" rel="noopener">Política de ética</a> · <a href="https://periodicos.uninove.br/remark/similaridade" target="_blank" rel="noopener">Integridade acadêmica</a></li>
+      <li><a href="https://apastyle.apa.org/style-grammar-guidelines" target="_blank" rel="noopener">APA Style — guidelines</a></li>
+      <li>Contato editorial: <a href="mailto:rbm@uninove.br">rbm@uninove.br</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    ReMark — Revista Brasileira de Marketing / Brazilian Journal of Marketing · e-ISSN 2177-5184<br>
+    Edição Especial EnANPAD 50 anos · Divisão de Marketing · Documento de apoio aos autores.
+  </footer>
+</div>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c02608684afe4b2799c74ca90261d2f7"}'></script>
+</body>
+</html>
