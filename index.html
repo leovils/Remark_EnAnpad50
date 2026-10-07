@@ -118,6 +118,18 @@
   .check input{margin-top:4px; width:17px; height:17px; accent-color:var(--azul-med); flex:0 0 auto;}
   .check label{cursor:pointer;}
 
+  .prazo{
+    background:linear-gradient(135deg,#0E3266 0%,#1F5DA8 100%);
+    color:#fff; border-radius:14px; padding:26px 28px; margin-bottom:22px;
+  }
+  .prazo .rotulo{
+    display:block; font-size:.82rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--amarelo); font-weight:700; margin-bottom:6px;
+  }
+  .prazo .data{font-size:2.5rem; line-height:1.15; font-weight:700; margin:0 0 6px;}
+  .prazo .nota{font-size:.95rem; color:#CFE0F4; margin:0;}
+  @media (max-width:560px){ .prazo .data{font-size:1.8rem;} }
+
   footer{color:var(--tinta-suave); font-size:.86rem; text-align:center; padding-top:10px;}
   footer a{color:var(--azul-med);}
 
@@ -136,7 +148,7 @@
   <div class="inner">
     <span class="selo">Chamada · EnANPAD 50 anos</span>
     <h1>Edição Especial ReMark</h1>
-    <p>Guia de submissão para os artigos aprovados na Divisão de Marketing do EnANPAD 2026. Sem nova rodada de avaliação por pares: o que entra é o que será publicado, desde que atenda às diretrizes vigentes da Revista Brasileira de Marketing.</p>
+    <p>Guia de submissão para os artigos aprovados na Divisão de Marketing do EnANPAD 2026. Todos os artigos aprovados na divisão são elegíveis. Não há nova avaliação por pares nem filtro editorial de mérito: o único critério é o cumprimento das diretrizes vigentes da Revista Brasileira de Marketing.</p>
     <div class="meta-capa">ReMark — Revista Brasileira de Marketing · e-ISSN 2177-5184 · Qualis A4 · Portal de Periódicos UNINOVE</div>
   </div>
 </header>
@@ -147,13 +159,20 @@
     <a class="btn" href="index.html" download="guia-edicao-especial-remark.html">⬇ Baixar este guia (.html)</a>
     <button class="btn secundario" onclick="window.print()">🖨 Imprimir / salvar em PDF</button>
     <a class="btn secundario" href="https://periodicos.uninove.br/remark/about/submissions" target="_blank" rel="noopener">↗ Diretrizes oficiais da ReMark</a>
+    <a class="btn secundario" href="mailto:leonardo.vils@uni9.pro.br?subject=Edi%C3%A7%C3%A3o%20Especial%20EnANPAD%202026">✉ Dúvidas</a>
+  </div>
+
+  <div class="prazo">
+    <span class="rotulo">Prazo de submissão</span>
+    <p class="data">15 a 30 de outubro de 2026</p>
+    <p class="nota">Janela única: fora desse período o sistema não aceita submissões para esta seção.</p>
   </div>
 
   <section>
     <h2><span class="num">1</span>Antes de submeter</h2>
     <p class="sub">O artigo chega à ReMark já avaliado no congresso — aproveite isso.</p>
     <div class="destaque">
-      <p><strong>Incorpore ao texto as sugestões dos revisores do EnANPAD que você julgar apropriadas.</strong> Os artigos desta edição especial <strong>não passarão por nova avaliação por pares</strong> — a avaliação da Divisão de Marketing do congresso é a única. Esta é, portanto, a última oportunidade de aprimorar o manuscrito antes da publicação.</p>
+      <p><strong>Incorpore ao texto as sugestões dos revisores do EnANPAD que você julgar apropriadas.</strong> Os artigos desta edição especial <strong>não passarão por nova avaliação por pares nem por filtro editorial de mérito</strong> — a avaliação da Divisão de Marketing do congresso é a única, e o único critério de aceite é o cumprimento do formato. Esta é, portanto, a última oportunidade de aprimorar o manuscrito antes da publicação.</p>
     </div>
     <ul>
       <li>Revise a aderência do texto às normas da APA e ao formato exigido pela revista — a conferência editorial de conformidade (formatação, metadados e documentos obrigatórios) continua valendo, e o que não estiver em ordem volta para o autor.</li>
@@ -295,6 +314,7 @@
       <li><a href="https://periodicos.uninove.br/remark/codigoconduta" target="_blank" rel="noopener">Política de ética</a> · <a href="https://periodicos.uninove.br/remark/similaridade" target="_blank" rel="noopener">Integridade acadêmica</a></li>
       <li><a href="https://apastyle.apa.org/style-grammar-guidelines" target="_blank" rel="noopener">APA Style — guidelines</a></li>
       <li>Contato editorial: <a href="mailto:rbm@uninove.br">rbm@uninove.br</a></li>
+      <li>Dúvidas sobre esta edição especial: <a href="mailto:leonardo.vils@uni9.pro.br?subject=Edi%C3%A7%C3%A3o%20Especial%20EnANPAD%202026">leonardo.vils@uni9.pro.br</a></li>
     </ul>
   </section>
 
